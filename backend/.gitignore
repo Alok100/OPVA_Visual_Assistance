@@ -1,0 +1,19 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Pretrained/base weights are downloaded on demand by ultralytics, not committed.
+yolov8n.pt
+yolov8s-worldv2.pt
+weights/
+
+# Training run artifacts (checkpoints, plots) are regenerable; only the
+# fine-tuned weights we actually use (models/) are kept.
+runs/
+
+# Uploaded photos, generated labels, review overlays, and prepared YOLO
+# datasets are all regenerable from scripts/ + the external source photo
+# folder — not committed. The actual human-verified annotations (Step 2)
+# live as code in scripts/annotate_busbar_images.py, not as these files.
+data/experiments/
